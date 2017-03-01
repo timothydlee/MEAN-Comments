@@ -1,4 +1,5 @@
-import { Component } from "@angular/core";
+import { Component, Input } from "@angular/core";
+import { Message } from "./message.model";
 
 @Component({
     selector: 'app-message',
@@ -20,5 +21,7 @@ import { Component } from "@angular/core";
     `]
 })
 export class MessageComponent {
-
+    //Property binding - 'message' can be anything. "Message" is the front end model referenced up top (line 2)
+    //@Input() is function of angular core which allows us to reference properties passed down to this component from the parent component (app.component.html)
+    @Input() message: Message;
 }
