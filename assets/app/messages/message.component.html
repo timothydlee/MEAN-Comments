@@ -7,7 +7,9 @@
             {{ message.username }}
         </div>
         <div class="config">
-            <a href="#">Edit</a>
+            <!--(click) is equivalent to "onClick" event listener-->
+            <!--On click, runs onEdit() function in message.component.ts class-->
+            <a href="#" (click)="onEdit()">Edit</a>
             <a href="#">Delete</a>
         </div>
     </footer>

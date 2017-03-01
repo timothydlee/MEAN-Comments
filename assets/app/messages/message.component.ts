@@ -1,4 +1,4 @@
-import { Component, Input } from "@angular/core";
+import {Component, Input, Output, EventEmitter } from "@angular/core";
 import { Message } from "./message.model";
 
 @Component({
@@ -24,4 +24,11 @@ export class MessageComponent {
     //Property binding - 'message' can be anything. "Message" is the front end model referenced up top (line 2)
     //@Input() is function of angular core which allows us to reference properties passed down to this component from the parent component (app.component.html)
     @Input() message: Message;
+
+    //EventEmitter is a generics (a feature that allows you to create classes that can use multiple types
+    //EventEmitter doesn't care which type it is.
+    @Output() editClicked = new EventEmitter<string>();
+    onEdit() {
+        this.editClicked.emit('A new value');
+    }
 }
