@@ -1,12 +1,6 @@
 <div class="container">
     <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <app-message
-                    [message]="message"
-                    (editClicked)="message.content = $event"
-                    <!--*ngFor is structural directive-->
-                    *ngFor="let message of messages">                    >
-            </app-message>
-        </div>
+        <app-message-list>
+        </app-message-list>
     </div>
 </div>
