@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+const jwt = require('jsonwebtoken');
 
 const Message = require('../models/message');
 
@@ -19,7 +20,20 @@ router.get('/', function(req, res, next) {
 		});
 });
 
-router.post('/', function (req, res, next) {
+//Since we want only authenticated users to be able to post/edit/delete messages, we'll do that here, after the main get route which any person can see
+router.use('/', function(req, res, next) {
+	jwt.verify(req.query.token, 'secret', function(err, decoded) {
+		if (err) {
+			return res.status(401).json({
+				title: 'Not Authenticated',
+				error: err
+			});
+		}
+		next();
+	});
+});
+
+router.post('/', function(req, res, next) {
 	var message = new Message({
 		content: req.body.content
 	});
