@@ -3,6 +3,7 @@ const router = express.Router();
 const jwt = require('jsonwebtoken');
 
 const Message = require('../models/message');
+const User = require('../models/user');
 
 router.get('/', function(req, res, next) {
 	Message.find()
@@ -34,20 +35,32 @@ router.use('/', function(req, res, next) {
 });
 
 router.post('/', function(req, res, next) {
-	var message = new Message({
-		content: req.body.content
-	});
+	var decoded = jwt.decode(req.query.token);
 
-	message.save(function(err, result) {
+	User.findById(decoded.user._id, function(err, user) {
 		if (err) {
 			return res.status(500).json({
-				title: 'An error occurred in the post route',
+				title: 'An error occurred looking for userId',
 				error: err
 			});
 		}
-		res.status(201).json({
-			message: 'Message saved',
-			obj: result
+		var message = new Message({
+			content: req.body.content,
+			user: user
+		});
+		message.save(function(err, result) {
+			if (err) {
+				return res.status(500).json({
+					title: 'An error occurred in the post route',
+					error: err
+				});
+			}
+			user.messages.push(result);
+			user.save();
+			res.status(201).json({
+				message: 'Message saved',
+				obj: result
+			});
 		});
 	});
 });
