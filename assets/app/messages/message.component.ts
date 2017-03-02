@@ -1,5 +1,6 @@
-import {Component, Input, Output, EventEmitter } from "@angular/core";
+import { Component, Input, Output, EventEmitter } from "@angular/core";
 import { Message } from "./message.model";
+import { MessageService } from "./message.service";
 
 @Component({
     selector: 'app-message',
@@ -28,7 +29,13 @@ export class MessageComponent {
     //EventEmitter is a generics (a feature that allows you to create classes that can use multiple types
     //EventEmitter doesn't care which type it is.
     @Output() editClicked = new EventEmitter<string>();
+
+    constructor(private messageService: MessageService) {}
     onEdit() {
         this.editClicked.emit('A new value');
+    }
+
+    onDelete() {
+        this.messageService.deleteMessage(this.message);
     }
 }
