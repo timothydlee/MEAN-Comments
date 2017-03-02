@@ -1,4 +1,4 @@
-import { Component, Input, Output, EventEmitter } from "@angular/core";
+import { Component, Input } from "@angular/core";
 import { Message } from "./message.model";
 import { MessageService } from "./message.service";
 
@@ -27,12 +27,12 @@ export class MessageComponent {
     @Input() message: Message;
 
     //EventEmitter is a generics (a feature that allows you to create classes that can use multiple types
-    //EventEmitter doesn't care which type it is.
-    @Output() editClicked = new EventEmitter<string>();
+    //EventEmitter doesn't care which type it is. Taking @Output out because we want to actually save things into the database now
+    // @Output() editClicked = new EventEmitter<string>();
 
     constructor(private messageService: MessageService) {}
     onEdit() {
-        this.editClicked.emit('A new value');
+        this.messageService.editMessage(this.message);
     }
 
     onDelete() {
