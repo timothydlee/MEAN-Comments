@@ -31,6 +31,7 @@ export class MessageComponent {
     // @Output() editClicked = new EventEmitter<string>();
 
     constructor(private messageService: MessageService) {}
+
     onEdit() {
         this.messageService.editMessage(this.message);
     }
@@ -40,5 +41,9 @@ export class MessageComponent {
             .subscribe(
                 result => console.log(result)
             );
+    }
+
+    belongsToUser() {
+        return localStorage.getItem('userId') === this.message.userId;
     }
 }
