@@ -4,6 +4,7 @@ import 'rxjs/Rx';
 import { Observable } from "rxjs";
 
 import { Message } from "./message.model";
+import { ErrorService } from "../errors/error.service";
 //In order to inject a service into a service, in this case Http, the class must have metadata which requires a decorator. Since we don't want to turn this Service into a component by using @Component, @Injectable is a decorator designed specifically to address the metadata requirement
 @Injectable()
 
@@ -12,7 +13,7 @@ export class MessageService {
     private messages: Message[] = [];
     messageIsEdit = new EventEmitter<Message>();
 
-    constructor(private http: Http) {}
+    constructor(private http: Http, private errorService: ErrorService) {}
 
     addMessage(message) {
         const body = JSON.stringify(message);
@@ -33,7 +34,10 @@ export class MessageService {
                 this.messages.push(message);
                 return message;
             })
-            .catch((err: Response) => Observable.throw(err.json()));
+            .catch((err: Response) => {
+                this.errorService.handleError(err.json());
+                return Observable.throw(err.json());
+            });
     }
 
     getMessages() {
@@ -52,7 +56,10 @@ export class MessageService {
                 this.messages = transformedMessages;
                 return transformedMessages;
             })
-            .catch((error: Response) =>  Observable.throw(error.json()));
+            .catch((err: Response) => {
+                this.errorService.handleError(err.json());
+                return Observable.throw(err.json());
+            });
     }
 
     editMessage(message: Message) {
@@ -67,7 +74,10 @@ export class MessageService {
             : '';
         return this.http.patch(`http://localhost:3000/message/${message.messageId}${token}`, body, {headers: headers})
             .map((response: Response) => response.json())
-            .catch((err: Response) => Observable.throw(err.json()));
+            .catch((err: Response) => {
+                this.errorService.handleError(err.json());
+                return Observable.throw(err.json());
+            });
     }
 
     deleteMessage(message: Message) {
@@ -77,6 +87,9 @@ export class MessageService {
             : '';
         return this.http.delete(`http://localhost:3000/message/${message.messageId}${token}`)
             .map((response: Response) => response.json())
-            .catch((err: Response) => Observable.throw(err.json()));
+            .catch((err: Response) => {
+                this.errorService.handleError(err.json());
+                return Observable.throw(err.json());
+            });
     }
 }
