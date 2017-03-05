@@ -23,7 +23,7 @@ export var AuthService = (function () {
         var _this = this;
         var body = JSON.stringify(user);
         var headers = new Headers({ 'Content-Type': 'application/json' });
-        return this.http.post('https://mean-comments.herokuapp.com/user/signin', body, { headers: headers })
+        return this.http.post('https://mean-comments.herokuapp.com/signin', body, { headers: headers })
             .map(function (response) { return response.json(); })
             .catch(function (error) {
             _this.errorService.handleError(error.json());
