@@ -8,7 +8,6 @@ import { User } from "./user.model";
     selector: 'app-signup',
     templateUrl: './signup.component.html'
 })
-
 export class SignupComponent implements OnInit {
     myForm: FormGroup;
 
@@ -24,7 +23,7 @@ export class SignupComponent implements OnInit {
         this.authService.signup(user)
             .subscribe(
                 data => console.log(data),
-                err => console.error(err)
+                error => console.error(error)
             );
         this.myForm.reset();
     }
@@ -35,9 +34,9 @@ export class SignupComponent implements OnInit {
             lastName: new FormControl(null, Validators.required),
             email: new FormControl(null, [
                 Validators.required,
-                Validators.pattern("[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?")
+                Validators.pattern("[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?")
             ]),
-            password: new FormControl(null, Validators.required),
+            password: new FormControl(null, Validators.required)
         });
     }
 }

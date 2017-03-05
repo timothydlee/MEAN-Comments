@@ -7,8 +7,6 @@
             {{ message.username }}
         </div>
         <div class="config" *ngIf="belongsToUser()">
-            <!--(click) is equivalent to "onClick" event listener-->
-            <!--On click, runs onEdit() function in message.component.ts class-->
             <a (click)="onEdit()">Edit</a>
             <a (click)="onDelete()">Delete</a>
         </div>

@@ -11,9 +11,7 @@ import { AuthService } from "./auth.service";
         </div>
     `
 })
-
 export class LogoutComponent {
-
     constructor(private authService: AuthService, private router: Router) {}
 
     onLogout() {

@@ -1,4 +1,6 @@
 import { Component, OnInit } from "@angular/core";
+
+import { Error } from "./error.model";
 import { ErrorService } from "./error.service";
 
 @Component({
