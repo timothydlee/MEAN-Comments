@@ -105,13 +105,13 @@ class _View_AuthenticationComponent0 extends import1.AppView<import3.Authenticat
   }
   createInternal(rootSelector:string):import2.AppElement {
     const parentRenderNode:any = this.renderer.createViewRoot(this.declarationAppElement.nativeElement);
-    this._text_0 = this.renderer.createText(parentRenderNode,'\n		',(null as any));
+    this._text_0 = this.renderer.createText(parentRenderNode,'\n        ',(null as any));
     this._el_1 = this.renderer.createElement(parentRenderNode,'header',(null as any));
     this.renderer.setElementAttribute(this._el_1,'class','row spacing');
-    this._text_2 = this.renderer.createText(this._el_1,'\n			',(null as any));
+    this._text_2 = this.renderer.createText(this._el_1,'\n            ',(null as any));
     this._el_3 = this.renderer.createElement(this._el_1,'nav',(null as any));
     this.renderer.setElementAttribute(this._el_3,'class','col-md-8 col-md-offset-2');
-    this._text_4 = this.renderer.createText(this._el_3,'\n			    ',(null as any));
+    this._text_4 = this.renderer.createText(this._el_3,'\n                ',(null as any));
     this._el_5 = this.renderer.createElement(this._el_3,'ul',(null as any));
     this.renderer.setElementAttribute(this._el_5,'class','nav nav-tabs');
     this._text_6 = this.renderer.createText(this._el_5,'\n                    ',(null as any));
@@ -122,8 +122,8 @@ class _View_AuthenticationComponent0 extends import1.AppView<import3.Authenticat
     this._query_RouterLinkWithHref_7_1 = new import12.QueryList<any>();
     this._el_8 = this.renderer.createElement(this._el_7,'a',(null as any));
     this._RouterLinkWithHref_8_3 = new import13.RouterLinkWithHref(this.parentInjector.get(import16.Router),this.parentInjector.get(import18.ActivatedRoute),this.parentInjector.get(import19.LocationStrategy));
-    this._text_9 = this.renderer.createText(this._el_8,'Sign Up',(null as any));
-    this._text_10 = this.renderer.createText(this._el_5,'\n					',(null as any));
+    this._text_9 = this.renderer.createText(this._el_8,'Signup',(null as any));
+    this._text_10 = this.renderer.createText(this._el_5,'\n                    ',(null as any));
     this._anchor_11 = this.renderer.createTemplateAnchor(this._el_5,(null as any));
     this._appEl_11 = new import2.AppElement(11,5,this,this._anchor_11);
     this._TemplateRef_11_5 = new import20.TemplateRef_(this._appEl_11,viewFactory_AuthenticationComponent1);
@@ -133,18 +133,18 @@ class _View_AuthenticationComponent0 extends import1.AppView<import3.Authenticat
     this._appEl_13 = new import2.AppElement(13,5,this,this._anchor_13);
     this._TemplateRef_13_5 = new import20.TemplateRef_(this._appEl_13,viewFactory_AuthenticationComponent2);
     this._NgIf_13_6 = new import14.NgIf(this._appEl_13.vcRef,this._TemplateRef_13_5);
-    this._text_14 = this.renderer.createText(this._el_5,'\n				',(null as any));
-    this._text_15 = this.renderer.createText(this._el_3,'\n			',(null as any));
-    this._text_16 = this.renderer.createText(this._el_1,'\n		',(null as any));
-    this._text_17 = this.renderer.createText(parentRenderNode,'\n		',(null as any));
+    this._text_14 = this.renderer.createText(this._el_5,'\n                ',(null as any));
+    this._text_15 = this.renderer.createText(this._el_3,'\n            ',(null as any));
+    this._text_16 = this.renderer.createText(this._el_1,'\n        ',(null as any));
+    this._text_17 = this.renderer.createText(parentRenderNode,'\n        ',(null as any));
     this._el_18 = this.renderer.createElement(parentRenderNode,'div',(null as any));
     this.renderer.setElementAttribute(this._el_18,'class','row spacing');
-    this._text_19 = this.renderer.createText(this._el_18,'\n		    ',(null as any));
+    this._text_19 = this.renderer.createText(this._el_18,'\n           ',(null as any));
     this._el_20 = this.renderer.createElement(this._el_18,'router-outlet',(null as any));
     this._appEl_20 = new import2.AppElement(20,18,this,this._el_20);
     this._RouterOutlet_20_5 = new import15.RouterOutlet(this.parentInjector.get(import21.RouterOutletMap),this._appEl_20.vcRef,this.parentInjector.get(import22.ComponentFactoryResolver),(null as any));
     this._text_21 = this.renderer.createText(this._el_18,'\n        ',(null as any));
-    this._text_22 = this.renderer.createText(parentRenderNode,'\n	',(null as any));
+    this._text_22 = this.renderer.createText(parentRenderNode,'\n    ',(null as any));
     this._expr_0 = import7.UNINITIALIZED;
     var disposable_0:Function = this.renderer.listen(this._el_8,'click',this.eventHandler(this._handle_click_8_0.bind(this)));
     this._arr_0 = import4.pureProxy1((p0:any):any[] => {
@@ -281,7 +281,7 @@ class _View_AuthenticationComponent1 extends import1.AppView<any> {
     this._query_RouterLinkWithHref_0_1 = new import12.QueryList<any>();
     this._el_1 = this.renderer.createElement(this._el_0,'a',(null as any));
     this._RouterLinkWithHref_1_3 = new import13.RouterLinkWithHref(this.parent.parentInjector.get(import16.Router),this.parent.parentInjector.get(import18.ActivatedRoute),this.parent.parentInjector.get(import19.LocationStrategy));
-    this._text_2 = this.renderer.createText(this._el_1,'Sign In',(null as any));
+    this._text_2 = this.renderer.createText(this._el_1,'Signin',(null as any));
     this._expr_0 = import7.UNINITIALIZED;
     var disposable_0:Function = this.renderer.listen(this._el_1,'click',this.eventHandler(this._handle_click_1_0.bind(this)));
     this._arr_0 = import4.pureProxy1((p0:any):any[] => {

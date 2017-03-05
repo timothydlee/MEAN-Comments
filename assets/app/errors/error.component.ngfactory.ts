@@ -88,7 +88,6 @@ class _View_ErrorComponent0 extends import1.AppView<import3.ErrorComponent> {
   _text_29:any;
   _text_30:any;
   _text_31:any;
-  _text_32:any;
   _map_0:any;
   /*private*/ _expr_0:any;
   _map_1:any;
@@ -109,17 +108,17 @@ class _View_ErrorComponent0 extends import1.AppView<import3.ErrorComponent> {
     this.renderer.setElementAttribute(this._el_2,'role','dialog');
     this.renderer.setElementAttribute(this._el_2,'tabindex','-1');
     this._NgStyle_2_3 = new import11.NgStyle(this.parentInjector.get(import12.KeyValueDiffers),new import13.ElementRef(this._el_2),this.renderer);
-    this._text_3 = this.renderer.createText(this._el_2,'\n	',(null as any));
+    this._text_3 = this.renderer.createText(this._el_2,'\n    ',(null as any));
     this._el_4 = this.renderer.createElement(this._el_2,'div',(null as any));
     this.renderer.setElementAttribute(this._el_4,'class','modal-dialog');
     this.renderer.setElementAttribute(this._el_4,'role','document');
-    this._text_5 = this.renderer.createText(this._el_4,'\n		',(null as any));
+    this._text_5 = this.renderer.createText(this._el_4,'\n        ',(null as any));
     this._el_6 = this.renderer.createElement(this._el_4,'div',(null as any));
     this.renderer.setElementAttribute(this._el_6,'class','modal-content');
-    this._text_7 = this.renderer.createText(this._el_6,'\n			',(null as any));
+    this._text_7 = this.renderer.createText(this._el_6,'\n            ',(null as any));
     this._el_8 = this.renderer.createElement(this._el_6,'div',(null as any));
     this.renderer.setElementAttribute(this._el_8,'class','modal-header');
-    this._text_9 = this.renderer.createText(this._el_8,'\n				',(null as any));
+    this._text_9 = this.renderer.createText(this._el_8,'\n                ',(null as any));
     this._el_10 = this.renderer.createElement(this._el_8,'button',(null as any));
     this.renderer.setElementAttribute(this._el_10,'aria-label','Close');
     this.renderer.setElementAttribute(this._el_10,'class','close');
@@ -127,31 +126,30 @@ class _View_ErrorComponent0 extends import1.AppView<import3.ErrorComponent> {
     this._el_11 = this.renderer.createElement(this._el_10,'span',(null as any));
     this.renderer.setElementAttribute(this._el_11,'aria-hidden','true');
     this._text_12 = this.renderer.createText(this._el_11,'×',(null as any));
-    this._text_13 = this.renderer.createText(this._el_8,'\n				',(null as any));
+    this._text_13 = this.renderer.createText(this._el_8,'\n                ',(null as any));
     this._el_14 = this.renderer.createElement(this._el_8,'h4',(null as any));
     this.renderer.setElementAttribute(this._el_14,'class','modal-title');
     this._text_15 = this.renderer.createText(this._el_14,'',(null as any));
-    this._text_16 = this.renderer.createText(this._el_8,'\n			',(null as any));
-    this._text_17 = this.renderer.createText(this._el_6,'\n			',(null as any));
+    this._text_16 = this.renderer.createText(this._el_8,'\n            ',(null as any));
+    this._text_17 = this.renderer.createText(this._el_6,'\n            ',(null as any));
     this._el_18 = this.renderer.createElement(this._el_6,'div',(null as any));
     this.renderer.setElementAttribute(this._el_18,'class','modal-body');
-    this._text_19 = this.renderer.createText(this._el_18,'\n				',(null as any));
+    this._text_19 = this.renderer.createText(this._el_18,'\n                ',(null as any));
     this._el_20 = this.renderer.createElement(this._el_18,'p',(null as any));
     this._text_21 = this.renderer.createText(this._el_20,'',(null as any));
-    this._text_22 = this.renderer.createText(this._el_18,'\n			',(null as any));
-    this._text_23 = this.renderer.createText(this._el_6,'\n			',(null as any));
+    this._text_22 = this.renderer.createText(this._el_18,'\n            ',(null as any));
+    this._text_23 = this.renderer.createText(this._el_6,'\n            ',(null as any));
     this._el_24 = this.renderer.createElement(this._el_6,'div',(null as any));
     this.renderer.setElementAttribute(this._el_24,'class','modal-footer');
-    this._text_25 = this.renderer.createText(this._el_24,'\n				',(null as any));
+    this._text_25 = this.renderer.createText(this._el_24,'\n                ',(null as any));
     this._el_26 = this.renderer.createElement(this._el_24,'button',(null as any));
     this.renderer.setElementAttribute(this._el_26,'class','btn btn-default');
     this.renderer.setElementAttribute(this._el_26,'type','button');
     this._text_27 = this.renderer.createText(this._el_26,'Close',(null as any));
-    this._text_28 = this.renderer.createText(this._el_24,'\n			',(null as any));
-    this._text_29 = this.renderer.createText(this._el_6,'\n		',(null as any));
-    this._text_30 = this.renderer.createText(this._el_4,'\n	',(null as any));
+    this._text_28 = this.renderer.createText(this._el_24,'\n            ',(null as any));
+    this._text_29 = this.renderer.createText(this._el_6,'\n        ',(null as any));
+    this._text_30 = this.renderer.createText(this._el_4,'\n    ',(null as any));
     this._text_31 = this.renderer.createText(this._el_2,'\n',(null as any));
-    this._text_32 = this.renderer.createText(parentRenderNode,'\n',(null as any));
     this._map_0 = import4.pureProxy1((p0:any):{[key: string]:any} => {
       return {display: p0};
     });
@@ -196,8 +194,7 @@ class _View_ErrorComponent0 extends import1.AppView<import3.ErrorComponent> {
       this._text_28,
       this._text_29,
       this._text_30,
-      this._text_31,
-      this._text_32
+      this._text_31
     ]
     ,[
       disposable_0,

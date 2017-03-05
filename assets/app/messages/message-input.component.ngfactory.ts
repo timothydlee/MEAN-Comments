@@ -142,15 +142,15 @@ class _View_MessageInputComponent0 extends import1.AppView<import3.MessageInputC
     this._text_10 = this.renderer.createText(this._el_4,'\n        ',(null as any));
     this._text_11 = this.renderer.createText(this._el_2,'\n        ',(null as any));
     this._el_12 = this.renderer.createElement(this._el_2,'button',(null as any));
-    this.renderer.setElementAttribute(this._el_12,'class','btn btn-primary');
-    this.renderer.setElementAttribute(this._el_12,'type','submit');
-    this._text_13 = this.renderer.createText(this._el_12,'Save',(null as any));
-    this._text_14 = this.renderer.createText(this._el_2,'\n		',(null as any));
+    this.renderer.setElementAttribute(this._el_12,'class','btn btn-danger');
+    this.renderer.setElementAttribute(this._el_12,'type','button');
+    this._text_13 = this.renderer.createText(this._el_12,'Clear',(null as any));
+    this._text_14 = this.renderer.createText(this._el_2,'\n        ',(null as any));
     this._el_15 = this.renderer.createElement(this._el_2,'button',(null as any));
-    this.renderer.setElementAttribute(this._el_15,'class','btn btn-danger');
-    this.renderer.setElementAttribute(this._el_15,'type','button');
-    this._text_16 = this.renderer.createText(this._el_15,'Clear',(null as any));
-    this._text_17 = this.renderer.createText(this._el_2,'\n	',(null as any));
+    this.renderer.setElementAttribute(this._el_15,'class','btn btn-primary');
+    this.renderer.setElementAttribute(this._el_15,'type','submit');
+    this._text_16 = this.renderer.createText(this._el_15,'Save',(null as any));
+    this._text_17 = this.renderer.createText(this._el_2,'\n    ',(null as any));
     this._text_18 = this.renderer.createText(this._el_0,'\n',(null as any));
     var disposable_0:Function = this.renderer.listen(this._el_2,'ngSubmit',this.eventHandler(this._handle_ngSubmit_2_0.bind(this)));
     var disposable_1:Function = this.renderer.listen(this._el_2,'submit',this.eventHandler(this._handle_submit_2_1.bind(this)));
@@ -174,7 +174,7 @@ class _View_MessageInputComponent0 extends import1.AppView<import3.MessageInputC
     this._expr_18 = import7.UNINITIALIZED;
     this._expr_19 = import7.UNINITIALIZED;
     this._expr_20 = import7.UNINITIALIZED;
-    var disposable_5:Function = this.renderer.listen(this._el_15,'click',this.eventHandler(this._handle_click_15_0.bind(this)));
+    var disposable_5:Function = this.renderer.listen(this._el_12,'click',this.eventHandler(this._handle_click_12_0.bind(this)));
     this.init([],[
       this._el_0,
       this._text_1,
@@ -339,7 +339,7 @@ class _View_MessageInputComponent0 extends import1.AppView<import3.MessageInputC
     const pd_0:any = ((<any>this._DefaultValueAccessor_9_3.onTouched()) !== false);
     return (true && pd_0);
   }
-  private _handle_click_15_0($event:any):boolean {
+  private _handle_click_12_0($event:any):boolean {
     this.markPathToRootAsCheckOnce();
     const pd_0:any = ((<any>this.context.onClear(this._NgForm_2_3)) !== false);
     return (true && pd_0);

@@ -122,7 +122,6 @@ class _View_MessageListComponent1 extends import1.AppView<any> {
   _el_0:any;
   /*private*/ _appEl_0:import2.AppElement;
   _MessageComponent_0_4:import14.MessageComponent;
-  _text_1:any;
   /*private*/ _expr_0:any;
   constructor(viewUtils:import4.ViewUtils,parentInjector:import5.Injector,declarationEl:import2.AppElement) {
     super(_View_MessageListComponent1,renderType_MessageListComponent,import6.ViewType.EMBEDDED,viewUtils,parentInjector,declarationEl,import7.ChangeDetectorStatus.CheckAlways);
@@ -133,18 +132,13 @@ class _View_MessageListComponent1 extends import1.AppView<any> {
     var compView_0:any = import15.viewFactory_MessageComponent0(this.viewUtils,this.injector(0),this._appEl_0);
     this._MessageComponent_0_4 = new import14.MessageComponent(this.parent.parentInjector.get(import8.MessageService));
     this._appEl_0.initComponent(this._MessageComponent_0_4,[],compView_0);
-    this._text_1 = this.renderer.createText((null as any),'                    >\n            ',(null as any));
     compView_0.create(this._MessageComponent_0_4,[],(null as any));
     this._expr_0 = import7.UNINITIALIZED;
-    this.init([].concat([this._el_0]),[
-      this._el_0,
-      this._text_1
-    ]
-    ,[],[]);
+    this.init([].concat([this._el_0]),[this._el_0],[],[]);
     return (null as any);
   }
   injectorGetInternal(token:any,requestNodeIndex:number,notFoundResult:any):any {
-    if (((token === import14.MessageComponent) && ((0 <= requestNodeIndex) && (requestNodeIndex <= 1)))) { return this._MessageComponent_0_4; }
+    if (((token === import14.MessageComponent) && (0 === requestNodeIndex))) { return this._MessageComponent_0_4; }
     return notFoundResult;
   }
   detectChangesInternal(throwOnChange:boolean):void {

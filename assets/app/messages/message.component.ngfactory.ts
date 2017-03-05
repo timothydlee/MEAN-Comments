@@ -45,7 +45,7 @@ function viewFactory_MessageComponent_Host0(viewUtils:import4.ViewUtils,parentIn
   return new _View_MessageComponent_Host0(viewUtils,parentInjector,declarationEl);
 }
 export const MessageComponentNgFactory:import10.ComponentFactory<import3.MessageComponent> = new import10.ComponentFactory<import3.MessageComponent>('app-message',viewFactory_MessageComponent_Host0,import3.MessageComponent);
-const styles_MessageComponent:any[] = ['.author[_ngcontent-%COMP%] {\n            display: inline-block;\n            font-style: italic;;\n            font-size: 12px;\n            width: 80%;\n        }\n        \n        .config[_ngcontent-%COMP%] {\n            display: inline-block;\n            text-align: right;\n            font-size: 12px;\n            width: 19%;        \n        }'];
+const styles_MessageComponent:any[] = ['.author[_ngcontent-%COMP%] {\n            display: inline-block;\n            font-style: italic;\n            font-size: 12px;\n            width: 80%;\n        }\n        .config[_ngcontent-%COMP%] {\n            display: inline-block;\n            text-align: right;\n            font-size: 12px;\n            width: 19%;\n        }'];
 var renderType_MessageComponent:import0.RenderComponentType = (null as any);
 class _View_MessageComponent0 extends import1.AppView<import3.MessageComponent> {
   _el_0:any;
@@ -145,14 +145,12 @@ export function viewFactory_MessageComponent0(viewUtils:import4.ViewUtils,parent
 class _View_MessageComponent1 extends import1.AppView<any> {
   _el_0:any;
   _text_1:any;
-  _text_2:any;
+  _el_2:any;
   _text_3:any;
-  _el_4:any;
-  _text_5:any;
+  _text_4:any;
+  _el_5:any;
   _text_6:any;
-  _el_7:any;
-  _text_8:any;
-  _text_9:any;
+  _text_7:any;
   constructor(viewUtils:import4.ViewUtils,parentInjector:import5.Injector,declarationEl:import2.AppElement) {
     super(_View_MessageComponent1,renderType_MessageComponent,import6.ViewType.EMBEDDED,viewUtils,parentInjector,declarationEl,import7.ChangeDetectorStatus.CheckAlways);
   }
@@ -160,27 +158,23 @@ class _View_MessageComponent1 extends import1.AppView<any> {
     this._el_0 = this.renderer.createElement((null as any),'div',(null as any));
     this.renderer.setElementAttribute(this._el_0,'class','config');
     this._text_1 = this.renderer.createText(this._el_0,'\n            ',(null as any));
-    this._text_2 = this.renderer.createText(this._el_0,'\n            ',(null as any));
-    this._text_3 = this.renderer.createText(this._el_0,'\n            ',(null as any));
-    this._el_4 = this.renderer.createElement(this._el_0,'a',(null as any));
-    this._text_5 = this.renderer.createText(this._el_4,'Edit',(null as any));
-    this._text_6 = this.renderer.createText(this._el_0,'\n            ',(null as any));
-    this._el_7 = this.renderer.createElement(this._el_0,'a',(null as any));
-    this._text_8 = this.renderer.createText(this._el_7,'Delete',(null as any));
-    this._text_9 = this.renderer.createText(this._el_0,'\n        ',(null as any));
-    var disposable_0:Function = this.renderer.listen(this._el_4,'click',this.eventHandler(this._handle_click_4_0.bind(this)));
-    var disposable_1:Function = this.renderer.listen(this._el_7,'click',this.eventHandler(this._handle_click_7_0.bind(this)));
+    this._el_2 = this.renderer.createElement(this._el_0,'a',(null as any));
+    this._text_3 = this.renderer.createText(this._el_2,'Edit',(null as any));
+    this._text_4 = this.renderer.createText(this._el_0,'\n            ',(null as any));
+    this._el_5 = this.renderer.createElement(this._el_0,'a',(null as any));
+    this._text_6 = this.renderer.createText(this._el_5,'Delete',(null as any));
+    this._text_7 = this.renderer.createText(this._el_0,'\n        ',(null as any));
+    var disposable_0:Function = this.renderer.listen(this._el_2,'click',this.eventHandler(this._handle_click_2_0.bind(this)));
+    var disposable_1:Function = this.renderer.listen(this._el_5,'click',this.eventHandler(this._handle_click_5_0.bind(this)));
     this.init([].concat([this._el_0]),[
       this._el_0,
       this._text_1,
-      this._text_2,
+      this._el_2,
       this._text_3,
-      this._el_4,
-      this._text_5,
+      this._text_4,
+      this._el_5,
       this._text_6,
-      this._el_7,
-      this._text_8,
-      this._text_9
+      this._text_7
     ]
     ,[
       disposable_0,
@@ -189,12 +183,12 @@ class _View_MessageComponent1 extends import1.AppView<any> {
     ,[]);
     return (null as any);
   }
-  private _handle_click_4_0($event:any):boolean {
+  private _handle_click_2_0($event:any):boolean {
     this.markPathToRootAsCheckOnce();
     const pd_0:any = ((<any>this.parent.context.onEdit()) !== false);
     return (true && pd_0);
   }
-  private _handle_click_7_0($event:any):boolean {
+  private _handle_click_5_0($event:any):boolean {
     this.markPathToRootAsCheckOnce();
     const pd_0:any = ((<any>this.parent.context.onDelete()) !== false);
     return (true && pd_0);
