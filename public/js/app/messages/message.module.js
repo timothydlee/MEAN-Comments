@@ -1,10 +1,10 @@
-import { NgModule } from "@angular/core";
-import { CommonModule } from "@angular/common";
-import { FormsModule } from "@angular/forms";
-import { MessageComponent } from "./message.component";
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 import { MessagesComponent } from "./messages.component";
-import { MessageInputComponent } from "./message-input.component";
 import { MessageListComponent } from "./message-list.component";
+import { MessageComponent } from "./message.component";
+import { MessageInputComponent } from "./message-input.component";
 import { MessageService } from "./message.service";
 export var MessageModule = (function () {
     function MessageModule() {
@@ -12,10 +12,10 @@ export var MessageModule = (function () {
     MessageModule.decorators = [
         { type: NgModule, args: [{
                     declarations: [
-                        MessageComponent,
+                        MessagesComponent,
                         MessageListComponent,
-                        MessageInputComponent,
-                        MessagesComponent
+                        MessageComponent,
+                        MessageInputComponent
                     ],
                     imports: [
                         CommonModule,

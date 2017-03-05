@@ -11,9 +11,7 @@ var messageRoutes = require('./routes/messages');
 var userRoutes = require('./routes/user');
 
 var app = express();
-// mongoose.connect('localhost:27017/node-angular');
-mongoose.connect('mongodb://heroku_gdjgbtdt:5fraf22migcokmlm7n5ohm0ide@ds119020.mlab.com:19020/heroku_gdjgbtdt')
-
+mongoose.connect('localhost:27017/node-angular');
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
